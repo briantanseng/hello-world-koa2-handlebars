@@ -8,7 +8,7 @@ steps:
   - 'set'
   - 'image'
   - 'deployment/production'
-  - 'hello-world-koa2-container=gcr.io/${PROJECT_ID}/hello-world-koa2:$TAG_NAME'
+  - 'hello-world-koa2=gcr.io/${PROJECT_ID}/hello-world-koa2:$TAG_NAME'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-c'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=hello-world-koa2-cluster'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=production'
