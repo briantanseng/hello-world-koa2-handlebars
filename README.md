@@ -40,7 +40,7 @@ hello-world-koa2-handlebars
 docker stop hello-koa2
 ```
 
-## Clean-up 
+## Cleanup 
 Check the installed docker images
 ```
 docker images
