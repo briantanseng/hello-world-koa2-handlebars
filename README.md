@@ -1,5 +1,5 @@
 # hello-world-koa2-handlebars
-Hello world example using Koa 2 with handlebars templates
+Hello world example using Koa 2, handlebars templates and koa-router
 
 ## Clone this repository
 ```
