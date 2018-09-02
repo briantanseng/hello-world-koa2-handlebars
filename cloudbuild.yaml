@@ -1,14 +1,14 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ "build", "-t", "gcr.io/${PROJECT_ID}/hello-world-koa2", "." ]
+  args: [ "build", "-t", "gcr.io/${PROJECT_ID}/hello-world-koa2:$REVISION_ID", "." ]
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ "push", "gcr.io/${PROJECT_ID}/hello-world-koa2"]
+  args: [ "push", "gcr.io/${PROJECT_ID}/hello-world-koa2:$REVISION_ID"]
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
   - 'set'
   - 'image'
   - 'deployment/production'
-  - 'hello-world-koa2-container=gcr.io/${PROJECT_ID}/hello-world-koa2'
+  - 'hello-world-koa2-container=gcr.io/${PROJECT_ID}/hello-world-koa2:$REVISION_ID'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-c'
   - 'CLOUDSDK_CONTAINER_CLUSTER=hello-world-koa2-cluster'
