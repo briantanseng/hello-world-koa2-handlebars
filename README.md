@@ -11,6 +11,15 @@ cd hello-world-koa2-handlebars
 ```
 npm install
 ```
+Tested on node v8.11.4, npm 5.6.0
+
+## Start the application
+```
 npm start
 ```
+You should see the following message ```Server running on 3000```
+
+Browse to [http://localhost:3000](http://localhost:3000) to verify that your page is running.
+
+
 
