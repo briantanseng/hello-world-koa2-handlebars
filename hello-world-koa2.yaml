@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: hello-world-koa2
   labels:
-    app: hello-world
+    app: hello-world-koa2
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello-world
+      app: hello-world-koa2
   template:
     metadata:
       labels:
-        app: hello-world
+        app: hello-world-koa2
     spec:
       containers:
       - name: hello-world-koa2
