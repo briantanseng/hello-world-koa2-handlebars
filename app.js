@@ -21,5 +21,5 @@ router.get('/', async function(ctx, next) {
 
 app.use(router.routes());
 
-if (!module.parent) app.listen(3000);
-console.log('Server running on 3000');
+if (!module.parent) app.listen(80);
+console.log('Server running on 80');
