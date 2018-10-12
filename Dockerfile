@@ -6,6 +6,6 @@ COPY index.html /app
 COPY package.json /app
 
 RUN npm install --production
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["node", "app.js"]
