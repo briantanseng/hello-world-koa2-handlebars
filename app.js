@@ -14,7 +14,7 @@ app.use(views(path.join(__dirname + '/'), {
 
 
 router.get('/', async function(ctx, next) {
-    const data = { version: 1, message: "Hello World!", time: new Date() };
+    const data = { version: "1.1.0", message: "Hello World!", time: new Date() };
     console.log('router.get /', data);
     await ctx.render('index', { data });
 });
