@@ -3,12 +3,12 @@ steps:
   args: [ "build", "-t", "gcr.io/${PROJECT_ID}/hello-world-koa2:$TAG_NAME", "." ]
 - name: 'gcr.io/cloud-builders/docker'
   args: [ "push", "gcr.io/${PROJECT_ID}/hello-world-koa2:$TAG_NAME"]
-#- name: 'gcr.io/cloud-builders/kubectl'
-#  args:
-#  - 'set'
-#  - 'image'
-#  - 'deployment/hello-world-koa2'
-#  - 'hello-world-koa2=gcr.io/${PROJECT_ID}/hello-world-koa2:$TAG_NAME'
-#  env:
-#  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
-#  - 'CLOUDSDK_CONTAINER_CLUSTER=production'
+- name: 'gcr.io/cloud-builders/kubectl'
+  args:
+  - set
+  - image
+  - hello-world-koa2
+  - hello-world-koa2=gcr.io/${PROJECT_ID}/hello-world-koa2:$TAG_NAME
+  env:
+  - CLOUDSDK_COMPUTE_ZONE=asia-southeast1-c
+  - CLOUDSDK_CONTAINER_CLUSTER=hello-world-staging
