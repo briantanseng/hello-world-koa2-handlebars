@@ -11,4 +11,4 @@ steps:
   - hello-world-koa2=gcr.io/${PROJECT_ID}/hello-world-koa2:$TAG_NAME
   env:
   - CLOUDSDK_COMPUTE_ZONE=asia-southeast1-c
-  - CLOUDSDK_CONTAINER_CLUSTER=${CLUSTER_NAME}
+  - CLOUDSDK_CONTAINER_CLUSTER=${_CLUSTER_NAME}
