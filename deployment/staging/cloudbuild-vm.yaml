@@ -7,24 +7,9 @@ steps:
   args:
   - beta 
   - compute 
-  - --project=gdg-cloud-manila-demos 
   - instances 
-  - create-with-container 
+  - update-container 
   - hello-world-$BRANCH_NAME-vm-1 
   - --zone=us-central1-a 
-  - --machine-type=custom-1-1024 
-  - --subnet=default 
-  - --network-tier=PREMIUM 
-  - --metadata=google-logging-enabled=true 
-  - --maintenance-policy=MIGRATE 
-  - --service-account=485819406028-compute@developer.gserviceaccount.com 
-  - --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append 
-  - --tags=http-server 
-  - --image=cos-stable-74-11895-125-0 
-  - --image-project=cos-cloud 
-  - --boot-disk-size=10GB 
-  - --boot-disk-type=pd-standard 
-  - --boot-disk-device-name=hello-world-$BRANCH_NAME-vm-1 
   - --container-image=gcr.io/$PROJECT_ID/hello-world-$BRANCH_NAME:$REVISION_ID
-  - --container-restart-policy=always 
-  - --labels=container-vm=cos-stable-74-11895-125-0
+
