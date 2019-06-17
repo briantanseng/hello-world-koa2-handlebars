@@ -10,7 +10,7 @@ steps:
   - deployment/hello-world-deployment
   - hello-world=gcr.io/${PROJECT_ID}/hello-world-$BRANCH_NAME:$REVISION_ID
   - --namespace
-  - hello-world
+  - hello-world-$BRANCH_NAME
   env:
   - CLOUDSDK_COMPUTE_ZONE=us-central1-a
   - CLOUDSDK_CONTAINER_CLUSTER=hello-world-cluster
