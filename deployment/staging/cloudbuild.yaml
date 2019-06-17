@@ -7,9 +7,8 @@ steps:
   args:
   - set
   - image
-  - deployment
-  - hello-world-koa2
-  - hello-world-koa2=gcr.io/${PROJECT_ID}/hello-world-koa2:$REVISION_ID
+  - deployment/hello-world-koa2
+  - hello-world-koa2-sha256=gcr.io/${PROJECT_ID}/hello-world-koa2:$REVISION_ID
   env:
   - CLOUDSDK_COMPUTE_ZONE=us-central1-a
   - CLOUDSDK_CONTAINER_CLUSTER=hello-world-koa2
